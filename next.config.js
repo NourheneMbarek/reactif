@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   env: {
-    API_URL : '192.168.137.200:2727/api/',
+    API_URL : 'http://localhost:3000/api/',
     local_Url : 'http://localhost:3000'
   },
 }

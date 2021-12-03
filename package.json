@@ -47,7 +47,6 @@
     "react-test-renderer": "^17.0.2",
     "start-server-and-test": "^1.14.0",
     "typescript": "4.5.2"
-  },
-  "proxy": "192.168.137.200:2727"
+  }
   
 }
