@@ -1,0 +1,156 @@
+// READ THIS FIRST
+//
+// The styles here are meant to be "mobile first,"
+// which means that styles targeting desktop and
+// tablet sizes need to be added inside of
+// media queries.
+@import "mixins";
+// --- COLORS ---
+$textColor: #202035;
+$darkColor: #4B6281;
+$midtoneColor: #B0BDD2;
+$lightColor: #EAEDF2;
+$brightColor: #fff;
+
+$primaryColor: #0875E3;
+$secondaryColor: #8B4CE3;
+$tertiaryColor: #53C415;
+// add more colors as needed...
+$alertColor: #E9573F;
+
+$thinStroke: 1px;
+$thickStroke: 2px;
+
+
+
+
+
+
+
+// --- ROUNDED CORNER OPTIONS ---
+// (Squared is a given option, just
+// add "squared" class to the button)
+$radius1: .25rem;
+$radius2: 100rem; // fully rounded
+
+// --- SHADOWS ---
+$dropShadow1: 0 2px 4px 0 rgba(0,0,0,0.08);
+$dropShadow2: 0 3px 6px 0 rgba(0,0,0,0.16);
+$dropShadow3: 0 8px 12px 0 rgba(0,0,0,0.16);
+$dropShadow4: 0 16px 16px 0 rgba(0,0,0,0.16);
+
+
+
+// ----- Personal preference -----
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+// GRID CUSTOMIZATION
+.row {
+  min-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+// Example Modular stuff
+main {
+  margin-top: 4rem;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  box-sizing: border-box;
+  padding: 0.75rem 1rem;
+  line-height: 2.5rem;
+  background: $brightColor;
+  box-shadow: $dropShadow2;
+}
+header nav {
+  display: block;
+  text-align: right;
+}
+header nav a, header nav .button {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin-left: 3rem;
+}
+header nav a {
+  font-weight: bold;
+  text-decoration: none;
+  color: $darkColor;
+}
+
+.landing-hero {
+  background-image: linear-gradient(-45deg, #FFFFFF 7%, #EAEDF2 100%);
+  padding: 3rem 1rem 2rem 1rem;
+}
+.landing-hero .card .message {
+  margin: 2rem 1rem 0 1rem;
+  line-height: calc(2rem - 4px);
+  color: darken($tertiaryColor, 10%);
+}
+@media only screen and (min-width: 48rem) {
+  .landing-hero {
+    padding: 3rem 0 8rem 0;
+  }
+  .landing-hero h1 {
+    margin-bottom: 2rem;
+  }
+  .landing-hero .card {
+    overflow: hidden;
+    margin-top: 3rem;
+    box-shadow: $dropShadow4;
+    background: $brightColor;
+  }
+  .landing-hero .card .card-title {
+    padding: 0.25rem;
+    text-align: center;
+  }
+  .landing-hero .card .card-content {
+    padding: 2rem 4rem;
+  }
+  .landing-hero .card .card-content .button {
+    margin-top: 2rem;
+    box-shadow: $dropShadow2;
+  }
+}
+
+
+
+
+
+.cards-container{
+    margin-top: 4%;
+    .card{
+       // width: 100%;
+        //margin:'40px'
+        // .card-figure{
+        //    //@include reset-figure;
+        // }
+    }
+}
+.card{
+    margin: 2%;
+}
+
+
+
