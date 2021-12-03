@@ -31,42 +31,28 @@ const Login = () => {
         e.preventDefault();
         console.log(email);
         dispatch(login(email,password))
-
-        // await fetch('http://localhost:8000/api/login', {
-        //     method: 'POST',
-        //     headers: {'Content-Type': 'application/json'},
-        //     credentials: 'include',
-        //     body: JSON.stringify({
-        //         email,
-        //         password
-        //     })
-        // });
-
-        //await router.push('/');
     }
 
     return (
         <Layout>
-            <form onSubmit={submit}>
-                <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+            <form onSubmit={submit} className="login">
+            <h3 className="text-center text-info">Login</h3>
                 {inputs.map((input, id) => {
-                    return   <input key={id} type={input.type} className="form-control" placeholder={input.placeholder} required
+
+                    return   <div  className="formcontrol" >
+                        <label  className="text-info">{input.placeholder}</label><br/>
+  <input key={id} type={input.type} className="form-control" placeholder={input.placeholder} required
                     onChange={e => input.action(e.target.value)}
              />
+
+                    </div>
+                  
                 })
-
-
                 }
-                {/* <input type="email" className="form-control" placeholder="Email" required
-                       onChange={e => setEmail(e.target.value)}
-                />
-
-                <input type="password" className="form-control" placeholder="Password" required
-                       onChange={e => setPassword(e.target.value)}
-                /> */}
-
                 <button className="w-10 btn btn-primary" type="submit">Sign in</button>
             </form>
+
+
         </Layout>
     );
 };

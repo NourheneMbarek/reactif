@@ -45,13 +45,11 @@ const Layout = (props : any) => {
             </Head>
         <header>
   <div className="row">
-    {/* <div className="col-xs-6 col-md-6">
-      <h3>Design System SCSS</h3>
-    </div> */}
+   
     <div>
    
     </div>
-    <div  style={{float:'left'}}>
+    <div  className="redirect">
       <nav  >
         <a href="/home">Home</a>
          

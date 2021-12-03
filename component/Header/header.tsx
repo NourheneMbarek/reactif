@@ -51,7 +51,7 @@ const Layout = (props : any) => {
     <div>
    
     </div>
-    <div  style={{float:'left'}}>
+    <div className="redirect"  >
       <nav  >
         <a href="/home">Home</a>
          
